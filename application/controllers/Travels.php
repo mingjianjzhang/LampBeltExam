@@ -74,13 +74,7 @@ class Travels extends CI_Controller {
 		}
 
 
-		// else {
-		// 	$this->session->set_flashdata('missingFields', $result);
-		// 	redirect("/travels/newTrip");
-		// }
 
-	 
-		var_dump($date3);
-		var_dump($date2);
+
 	}
 }
