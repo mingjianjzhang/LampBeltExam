@@ -67,7 +67,7 @@ class Travels extends CI_Controller {
 		}
 		if (count($errors)) {
 			$this->session->set_flashdata("errors", $errors);
-			redirect("/travels/newTrip");
+			redirect("/travels/add");
 		} else {
 			$this->Trip->add_trip($this->input->post());
 			redirect('/travels');
