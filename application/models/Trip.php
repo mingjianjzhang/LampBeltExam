@@ -25,7 +25,7 @@ class Trip extends CI_Model {
 
 
 	public function get_own_trips($userId) {
-		$query = "SELECT destination, description, start_date, end_date FROM trips WHERE creator_id = $userId";
+		$query = "SELECT id, destination, description, start_date, end_date FROM trips WHERE creator_id = $userId";
 		return $this->db->query($query)->result_array();
 	}
 
@@ -52,7 +52,7 @@ class Trip extends CI_Model {
 	}
 
 	public function get_joined_trips($userId) {
-		$query = "select trips.destination, trips.start_date, trips.end_date, trips.description from trip_joiners JOIN trips ON trip_joiners.trip_id = trips.id WHERE trip_joiners.joiner_id = $userId";
+		$query = "select trips. id, trips.destination, trips.start_date, trips.end_date, trips.description from trip_joiners JOIN trips ON trip_joiners.trip_id = trips.id WHERE trip_joiners.joiner_id = $userId";
 		return $this->db->query($query)->result_array();
 	}
 }

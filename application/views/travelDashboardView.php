@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 		</tr>
 		<?php foreach ($ownTrips as $ownTrip) { ?>
 		<tr>
-			<td><?= $ownTrip['destination'] ?></td>
+			<td><a href="travels/destination/<?= $ownTrip['id'] ?>"><?= $ownTrip['destination'] ?></a></td>
 			<td><?= $ownTrip['start_date'] ?></td>
 			<td><?= $ownTrip['end_date'] ?></td>
 			<td><?= $ownTrip['description'] ?></td>
@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 		<?php } ?>
 		<?php foreach ($joinedTrips as $joinedTrip) { ?>
 		<tr>
-			<td><?= $joinedTrip['destination'] ?></td>
+			<td><a href="travels/destination/<?= $joinedTrip['id'] ?>"><?= $joinedTrip['destination'] ?></a></td>
 			<td><?= $joinedTrip['start_date'] ?></td>
 			<td><?= $joinedTrip['end_date'] ?></td>
 			<td><?= $joinedTrip['description'] ?></td>
@@ -84,11 +84,10 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 		<?php foreach ($othersTrips as $otherTrip) { ?>
 		<tr>
 			<td><?= $otherTrip['name'] ?></td>
-			<td><?= $otherTrip['destination'] ?></td>
+			<td><a href="travels/destination/<?= $otherTrip['trip_id']?>"><?= $otherTrip['destination'] ?></a></td>
 			<td><?= $otherTrip['start_date'] ?></td>
 			<td><?= $otherTrip['end_date'] ?></td>
 			<td><a href="/travels/join/<?= $otherTrip['trip_id'] ?>">Join</a></td>
-
 		</tr>
 		<?php } ?>
 	</table>

@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 		<div class="nav-wrapper">
 			<ul id="nav-mobile" class="right">
 				<li><a href="/travels">Home</a></li>
-				<li><a href="/session/logout">Logout</a></li>
+				<li><a href="/welcome/logout">Logout</a></li>
 			</ul>
 		</div>
 	</div>
